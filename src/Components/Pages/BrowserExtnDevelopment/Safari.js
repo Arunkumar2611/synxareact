@@ -1,12 +1,12 @@
 import { Box, Grid } from '@mui/material'
 import React from 'react'
 
-const PWA = () => {
-    return (
-        <Box>
+const Safari = () => {
+  return (
+    <Box>
             <Grid container>
             <Grid item xs={12} sm={6}>
-                    <h2>Progressive Web App Development</h2>
+                    <h2> Development</h2>
                     <p>
                         We create fast, reliable, and engaging Progressive Web Apps (PWA) using React, Angular, and Vue. Our web apps work seamlessly across all devices, ensuring an exceptional user experience.
                     </p>
@@ -20,7 +20,7 @@ const PWA = () => {
                 
             </Grid>
         </Box>
-    )
+  )
 }
 
-export default PWA
+export default Safari

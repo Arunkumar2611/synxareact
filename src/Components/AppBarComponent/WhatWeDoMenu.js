@@ -5,6 +5,9 @@ import { Box, Button, Grid, Typography, Hidden } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+
+const noUnderline = { textDecoration: "none" }
 
 const WhatWeDoMenu = () => {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -48,165 +51,176 @@ const WhatWeDoMenu = () => {
                             </Typography>
                             <Grid container>
                                 <Grid item xs={12} sm={6}>
-                                    <MenuItem onClick={handleClose}>
-                                        <Typography fontWeight={"bold"}>
-                                            <Link to={"mobileappdevelopment"}>
+                                    <Link style={noUnderline} to={"mobileappdevelopment"}>
+                                        <MenuItem onClick={handleClose}>
+                                            <Typography fontWeight={"bold"}>
                                                 Mobile App Development
-                                            </Link>
-                                        </Typography>
-                                    </MenuItem>
+                                            </Typography>
+                                        </MenuItem>
+                                    </Link>
                                     <Hidden smDown>
                                         <Grid container>
                                             <Grid item xs={12} sm={6}>
-                                                <Link to={"mobileappdevelopment/ios"} >
+                                                <HashLink style={noUnderline} to="/mobileappdevelopment#ios">
                                                     <MenuItem onClick={handleClose}>
                                                         IOS
                                                     </MenuItem>
-                                                </Link>
+                                                </HashLink>
                                             </Grid>
                                             <Grid item xs={12} sm={6}>
-                                                    <Link to={"mobileappdevelopment/android"} >
-                                                <MenuItem onClick={handleClose}>
-                                                    Android
+                                                <HashLink style={noUnderline} to="/mobileappdevelopment#android">
+                                                    <MenuItem onClick={handleClose}>
+                                                        Android
                                                     </MenuItem>
-                                                    </Link>
+                                                </HashLink>
                                             </Grid>
                                         </Grid>
                                         <Grid container>
                                             <Grid item xs={12} sm={6}>
-                                                <Link to={"mobileappdevelopment/hybrid"} ><MenuItem onClick={handleClose}>Hybrid App</MenuItem></Link>
+                                                <HashLink style={noUnderline} to={"mobileappdevelopment#hybrid"} ><MenuItem onClick={handleClose}>Hybrid App</MenuItem></HashLink>
                                             </Grid>
                                             <Grid item xs={12} sm={6}>
-                                                <Link to={"mobileappdevelopment/pwa"} ><MenuItem onClick={handleClose}>PWA App</MenuItem></Link>
-                                            </Grid>
-                                        </Grid>
-                                    </Hidden>
-                                </Grid>
-                                <Grid item xs={12} sm={6}>
-                                    <MenuItem onClick={handleClose}>
-                                        <Typography fontWeight={"bold"}>
-                                            Web 3.0 Development
-                                        </Typography>
-                                    </MenuItem>
-                                    <Hidden smDown>
-                                        <Grid container>
-                                            <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>Blockchain</MenuItem>
-                                            </Grid>
-                                            <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>NFT</MenuItem>
-                                            </Grid>
-                                        </Grid>
-                                        <Grid container>
-                                            <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>Crypto</MenuItem>
-                                            </Grid>
-                                            <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>Defi</MenuItem>
+                                                <HashLink style={noUnderline} to={"mobileappdevelopment#pwa"} ><MenuItem onClick={handleClose}>PWA App</MenuItem></HashLink>
                                             </Grid>
                                         </Grid>
                                     </Hidden>
                                 </Grid>
                                 <Grid item xs={12} sm={6}>
-                                    <MenuItem onClick={handleClose}>
-                                        <Typography fontWeight={"bold"}>
-                                            AI/ML and Iot Development
-                                        </Typography>
-                                    </MenuItem>
+                                    <Link style={noUnderline} to={"web-3-development"}>
+                                        <MenuItem onClick={handleClose}>
+                                            <Typography fontWeight={"bold"}>
+                                                Web 3.0 Development
+                                            </Typography>
+                                        </MenuItem>
+                                    </Link>
                                     <Hidden smDown>
                                         <Grid container>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>AI&ML</MenuItem>
+                                                <HashLink style={noUnderline} to={"web-3-development#blockchain"} ><MenuItem onClick={handleClose}>Blockchain</MenuItem></HashLink>
                                             </Grid>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>IOT</MenuItem>
+                                                <HashLink style={noUnderline} to={"web-3-development#nft"} ><MenuItem onClick={handleClose}>NFT</MenuItem></HashLink>
                                             </Grid>
                                         </Grid>
                                         <Grid container>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>ChatBot</MenuItem>
+                                                <HashLink style={noUnderline} to={"web-3-development#crypto"} ><MenuItem onClick={handleClose}>Crypto</MenuItem></HashLink>
                                             </Grid>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>Automation</MenuItem>
+                                                <HashLink style={noUnderline} to={"web-3-development#defi"} ><MenuItem onClick={handleClose}>Defi</MenuItem></HashLink>
                                             </Grid>
                                         </Grid>
                                     </Hidden>
                                 </Grid>
                                 <Grid item xs={12} sm={6}>
-                                    <MenuItem onClick={handleClose}>
-                                        <Typography fontWeight={"bold"}>
-                                            Web Development Service
-                                        </Typography>
-                                    </MenuItem>
+                                    <Link style={noUnderline} to={"ai-ml-and-iot-development"}>
+                                        <MenuItem onClick={handleClose}>
+                                            <Typography fontWeight={"bold"}>
+                                                AI/ML and Iot Development
+                                            </Typography>
+                                        </MenuItem>
+                                    </Link>
                                     <Hidden smDown>
                                         <Grid container>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>Enterprise</MenuItem>
+                                                <HashLink style={noUnderline} to={"ai-ml-and-iot-development#ai-and-ml"} ><MenuItem onClick={handleClose}>AI&ML</MenuItem></HashLink>
                                             </Grid>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>B2B and B2C</MenuItem>
+                                                <HashLink style={noUnderline} to={"ai-ml-and-iot-development#iot"} ><MenuItem onClick={handleClose}>IOT</MenuItem></HashLink>
                                             </Grid>
                                         </Grid>
                                         <Grid container>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>
+                                                <HashLink style={noUnderline} to={"ai-ml-and-iot-development#chatbot"} ><MenuItem onClick={handleClose}>ChatBot</MenuItem></HashLink>
+                                            </Grid>
+                                            <Grid item xs={12} sm={6}>
+                                                <HashLink style={noUnderline} to={"ai-ml-and-iot-development#automation"} ><MenuItem onClick={handleClose}>Automation</MenuItem></HashLink>
+                                            </Grid>
+                                        </Grid>
+                                    </Hidden>
+                                </Grid>
+                                <Grid item xs={12} sm={6}>
+                                    <Link style={noUnderline} to={"web-development-service"}>
+                                        <MenuItem onClick={handleClose}>
+                                            <Typography fontWeight={"bold"}>
+                                                Web Development Service
+                                            </Typography>
+                                        </MenuItem>
+                                    </Link>
+                                    <Hidden smDown>
+                                        <Grid container>
+                                            <Grid item xs={12} sm={6}>
+                                                <HashLink style={noUnderline} to={"web-development-service#enterprise"} ><MenuItem onClick={handleClose}>Enterprise</MenuItem></HashLink>
+                                            </Grid>
+                                            <Grid item xs={12} sm={6}>
+                                                <HashLink style={noUnderline} to={"web-development-service#b2b-b2c"} ><MenuItem onClick={handleClose}>B2B and B2C</MenuItem></HashLink>
+                                            </Grid>
+                                        </Grid>
+                                        <Grid container>
+                                            <Grid item xs={12} sm={6}>
+                                                <HashLink style={noUnderline} to={"web-development-service#custom-website"} ><MenuItem onClick={handleClose}>
                                                     Custom Website
-                                                </MenuItem>
+                                                </MenuItem></HashLink>
                                             </Grid>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>E-Commerce</MenuItem>
-                                            </Grid>
-                                        </Grid>
-                                    </Hidden>
-                                </Grid>
-                                <Grid item xs={12} sm={6}>
-                                    <MenuItem onClick={handleClose}>
-                                        <Typography fontWeight={"bold"}>
-                                            Browser Extension Development
-                                        </Typography>
-                                    </MenuItem>
-                                    <Hidden smDown>
-                                        <Grid container>
-                                            <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>Chrome</MenuItem>
-                                            </Grid>
-                                            <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>Safari</MenuItem>
-                                            </Grid>
-                                        </Grid>
-                                        <Grid container>
-                                            <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>Firefox</MenuItem>
-                                            </Grid>
-                                            <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>Edge</MenuItem>
+                                                <HashLink style={noUnderline} to={"web-development-service#e-commerce"} ><MenuItem onClick={handleClose}>E-Commerce</MenuItem></HashLink>
                                             </Grid>
                                         </Grid>
                                     </Hidden>
                                 </Grid>
                                 <Grid item xs={12} sm={6}>
-                                    <MenuItem onClick={handleClose}>
-                                        <Typography fontWeight={"bold"}>
-                                            Hire Remote Team
-                                        </Typography>
-                                    </MenuItem>
+                                    <Link style={noUnderline} to={"browser-extn-development"}>
+                                        <MenuItem onClick={handleClose}>
+                                            <Typography fontWeight={"bold"}>
+                                                Browser Extension Development
+                                            </Typography>
+                                        </MenuItem>
+                                    </Link>
                                     <Hidden smDown>
                                         <Grid container>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>
+                                                <HashLink style={noUnderline} to={"browser-extn-development#chrome"} ><MenuItem onClick={handleClose}>Chrome</MenuItem></HashLink>
+                                            </Grid>
+                                            <Grid item xs={12} sm={6}>
+                                                <HashLink style={noUnderline} to={"browser-extn-development#safari"} ><MenuItem onClick={handleClose}>Safari</MenuItem></HashLink>
+                                            </Grid>
+                                        </Grid>
+                                        <Grid container>
+                                            <Grid item xs={12} sm={6}>
+                                                <HashLink style={noUnderline} to={"browser-extn-development#firefox"} ><MenuItem onClick={handleClose}>Firefox</MenuItem></HashLink>
+                                            </Grid>
+                                            <Grid item xs={12} sm={6}>
+                                                <HashLink style={noUnderline} to={"browser-extn-development#edge"} ><MenuItem onClick={handleClose}>Edge</MenuItem></HashLink>
+                                            </Grid>
+                                        </Grid>
+                                    </Hidden>
+                                </Grid>
+                                <Grid item xs={12} sm={6}>
+                                    <Link style={noUnderline} to={"hire-remote-team"}>
+                                        <MenuItem onClick={handleClose}>
+                                            <Typography fontWeight={"bold"}>
+                                                Hire Remote Team
+                                            </Typography>
+                                        </MenuItem>
+                                    </Link>
+                                    <Hidden smDown>
+                                        <Grid container>
+                                            <Grid item xs={12} sm={6}>
+                                                <HashLink style={noUnderline} to={"hire-remote-team#hire-developer"} ><MenuItem onClick={handleClose}>
                                                     Hire Developer
                                                 </MenuItem>
+                                                </HashLink>
                                             </Grid>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>Hire Designer</MenuItem>
+                                                <HashLink style={noUnderline} to={"hire-remote-team#hire-designer"} ><MenuItem onClick={handleClose}>Hire Designer</MenuItem></HashLink>
                                             </Grid>
                                         </Grid>
                                         <Grid container>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>PHP Developer</MenuItem>
+                                                <HashLink style={noUnderline} to={"hire-remote-team#php-developer"} ><MenuItem onClick={handleClose}>PHP Developer</MenuItem></HashLink>
                                             </Grid>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>Consulting</MenuItem>
+                                                <HashLink style={noUnderline} to={"hire-remote-team#consulting"} ><MenuItem onClick={handleClose}>Consulting</MenuItem></HashLink>
                                             </Grid>
                                         </Grid>
                                     </Hidden>

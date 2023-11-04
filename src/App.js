@@ -14,6 +14,18 @@ import HybridApp from "./Components/Pages/MobileAppDevelopment/HybridApp";
 import IOS from "./Components/Pages/MobileAppDevelopment/IOS";
 import PWA from "./Components/Pages/MobileAppDevelopment/PWA";
 import AndroidDevelopment from "./Components/Pages/MobileAppDevelopment/Android";
+import AIMIDevelopment from "./Components/Pages/AIMLDevelopment/AIMIDevelopment";
+import ScrollToTop from "./Components/ScrollToUp";
+import BrowserExtnDevelopment from "./Components/Pages/BrowserExtnDevelopment/BrowserExtnDevelopment";
+import Web3Developmet from "./Components/Pages/Web3Devellopment/Web3Developmet";
+import WebDevelopmentService from "./Components/Pages/WebDevelopmentService/WebDevelopmentService";
+import HireRemoteTeam from "./Components/Pages/HireRemoteTeam/HireRemoteTeam";
+import MobileAppDevelopmentTech from "./Components/Pages/MobileAppDevelopmentTech/MobileAppDevelopmentTech";
+import FrontEndTech from "./Components/Pages/FrontEndTech/FrontEndTech";
+import BackendTech from "./Components/Pages/BackendTech/BackendTech";
+import FullStackTech from "./Components/Pages/FullStackTech/FullStackTech";
+import FutureTech from "./Components/Pages/FutureTech/FutureTech";
+import DevopsCloudTech from "./Components/Pages/DevopsCloudTech/DevopsCloudTech";
 
 
 const App = () => {
@@ -41,21 +53,49 @@ const App = () => {
           element: <MobileAppDevelopment />,
         },
         {
-          path: 'mobileappdevelopment/android',
-          element: <AndroidDevelopment />,
+          path: "/ai-ml-and-iot-development",
+          element: <AIMIDevelopment />,
         },
         {
-          path: 'mobileappdevelopment/hybrid',
-          element: <HybridApp />,
-        },  
+          path: "/browser-extn-development",
+          element: <BrowserExtnDevelopment />,
+        },
         {
-          path: 'mobileappdevelopment/ios',
-          element: <IOS />,
-        },  
+          path: "/web-3-development",
+          element: <Web3Developmet />,
+        },
         {
-          path: 'mobileappdevelopment/pwa',
-          element: <PWA />,
-        }, 
+          path: "/web-development-service",
+          element: <WebDevelopmentService />,
+        },
+        {
+          path: "/hire-remote-team",
+          element: <HireRemoteTeam />,
+        },
+        {
+          path: "/mobile-app-dev-tech",
+          element: <MobileAppDevelopmentTech />,
+        },
+        {
+          path: "/frontend-tech",
+          element: <FrontEndTech />,
+        },
+        {
+          path: "/backend-tech",
+          element: <BackendTech />,
+        },
+        {
+          path: "/fullstack-tech",
+          element: <FullStackTech />,
+        },
+        {
+          path: "/future-tech",
+          element: <FutureTech />,
+        },
+        {
+          path: "/devops-cloud-tech",
+          element: <DevopsCloudTech />,
+        },
       ]
     },
     
