@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { Box, Button, Grid, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+import { KeyboardArrowDown } from "@mui/icons-material";
+
+const noUnderline = { textDecoration: "none" }
 
 const WhatWeServeMenu = () => {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -19,12 +24,13 @@ const WhatWeServeMenu = () => {
     return (
         <>
             <Button
-                sx={{ color: "#fff" }}
+                sx={{ color: "black" }}
                 id="basic-button"
                 aria-controls={open ? 'basic-menu' : undefined}
                 aria-haspopup="true"
                 aria-expanded={open ? 'true' : undefined}
                 onClick={handleClick}
+                endIcon={<KeyboardArrowDown />}
             >
                 Whom We Serve
             </Button>
@@ -41,121 +47,112 @@ const WhatWeServeMenu = () => {
                     <Box maxWidth={500}>
                         <Grid container spacing={2} >
                             <Grid item xs={12} md={6} >
-                                <Typography component={"div"} m={2} variant="h5" fontWeight={"bold"}>Industries</Typography>
+                                <Link style={noUnderline} to={"industries"}><Typography component={"div"} m={2} variant="h5" fontWeight={"bold"}>Industries</Typography></Link>
                                 <Grid container>
                                     <Grid item xs={12} >
-                                        <div >
+                                        <HashLink style={noUnderline} to="/industries#startup-companies">
                                             <MenuItem onClick={handleClose}>
                                                 <Typography fontWeight={"bold"}>
                                                     Startup companies
                                                 </Typography>
                                             </MenuItem>
-                                        </div>
+                                            </HashLink>
                                     </Grid>
                                     <Grid item xs={12} >
-                                        <div >
+                                        <HashLink style={noUnderline} to="/industries#fintech-startups">
                                             <MenuItem onClick={handleClose}>
                                                 <Typography fontWeight={"bold"}>
                                                     Fintech Startups
                                                 </Typography>
                                             </MenuItem>
-                                        </div>
+                                        </HashLink>
                                     </Grid>
                                     <Grid item xs={12} >
-                                        <div >
+                                        <HashLink style={noUnderline} to="/industries#retail-industry">
                                             <MenuItem onClick={handleClose}>
                                                 <Typography fontWeight={"bold"}>
                                                     Retail Industry
                                                 </Typography>
                                             </MenuItem>
-                                        </div>
+                                        </HashLink>
                                     </Grid>
                                     <Grid item xs={12} >
-                                        <div >
+                                        <HashLink style={noUnderline} to="/industries#e-commerce-businesses">
                                             <MenuItem onClick={handleClose}>
                                                 <Typography fontWeight={"bold"}>
                                                     E-commerce Businesses
                                                 </Typography>
                                             </MenuItem>
-                                        </div>
+                                        </HashLink>
                                     </Grid>
                                     <Grid item xs={12} >
-                                        <div >
+                                        <HashLink style={noUnderline} to="/industries#advertising-agencies">
                                             <MenuItem onClick={handleClose}>
                                                 <Typography fontWeight={"bold"}>
                                                     Adverstising Agencies
                                                 </Typography>
                                             </MenuItem>
-                                        </div>
+                                        </HashLink>
                                     </Grid>
                                     <Grid item xs={12} >
-                                        <div >
-                                            <MenuItem onClick={handleClose}>
-                                                <Typography fontWeight={"bold"}>
-                                                    Fintech Startups
-                                                </Typography>
-                                            </MenuItem>
-                                        </div>
-                                    </Grid>
-                                    <Grid item xs={12} >
-                                        <div >
+                                        <HashLink style={noUnderline} to="/industries#educational-institutions">
                                             <MenuItem onClick={handleClose}>
                                                 <Typography fontWeight={"bold"}>
                                                     Educational Institutions
                                                 </Typography>
                                             </MenuItem>
-                                        </div>
+                                        </HashLink>
                                     </Grid>
                                     <Grid item xs={12} >
-                                        <div >
+                                        <HashLink style={noUnderline} to="/industries#interprises">
                                             <MenuItem onClick={handleClose}>
                                                 <Typography fontWeight={"bold"}>
                                                     Interprises
                                                 </Typography>
                                             </MenuItem>
-                                        </div>
+                                        </HashLink>
                                     </Grid>
                                     <Grid item xs={12} >
-                                        <div >
+                                        <HashLink style={noUnderline} to="/industries#climate-tech">
                                             <MenuItem onClick={handleClose}>
                                                 <Typography fontWeight={"bold"}>
                                                     Climate Tech
                                                 </Typography>
                                             </MenuItem>
-                                        </div>
+                                        </HashLink>
                                     </Grid>
                                 </Grid>
                             </Grid>
 
                             <Grid item xs={12} md={6}>
-                                <Typography component={"div"} m={2} variant="h5" fontWeight={"bold"}>Customer</Typography>
+                            <Link style={noUnderline} to={"customer"}><Typography component={"div"} m={2} variant="h5" fontWeight={"bold"}>Customer</Typography></Link>
                                 <Grid container>
                                     <Grid item xs={12} >
-                                        <div >
+                                        <HashLink style={noUnderline} to="/customer#portfolio">
                                             <MenuItem onClick={handleClose}>
                                                 <Typography fontWeight={"bold"}>
                                                     Portfolio
                                                 </Typography>
                                             </MenuItem>
-                                        </div>
+                                        </HashLink>
                                     </Grid>
                                     <Grid item xs={12} >
-                                        <div >
+                                        <HashLink style={noUnderline} to="/customer#testimonials">
                                             <MenuItem onClick={handleClose}>
                                                 <Typography fontWeight={"bold"}>
                                                     Testimonials
                                                 </Typography>
                                             </MenuItem>
-                                        </div>
+                                        </HashLink>
                                     </Grid>
                                     <Grid item xs={12} >
-                                        <div >
+                                        <HashLink style={noUnderline} to="/customer#featured-work">
                                             <MenuItem onClick={handleClose}>
                                                 <Typography fontWeight={"bold"}>
                                                     Featured Work
                                                 </Typography>
                                             </MenuItem>
-                                        </div>
+                                        </HashLink>
                                     </Grid>
                                 </Grid>
                             </Grid>

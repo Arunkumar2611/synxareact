@@ -6,6 +6,7 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+import { KeyboardArrowDown } from "@mui/icons-material";
 
 const noUnderline = { textDecoration: "none" }
 
@@ -28,12 +29,13 @@ const WhatWeDoMenu = () => {
     return (
         <>
             <Button
-                sx={{ color: "#fff" }}
+                sx={{ color: "black" }}
                 id="basic-button"
                 aria-controls={open ? "basic-menu" : undefined}
                 aria-haspopup="true"
                 aria-expanded={open ? "true" : undefined}
                 onClick={handleClick}
+                endIcon={<KeyboardArrowDown />}
             >
                 Whom We Serve
             </Button>
@@ -239,155 +241,161 @@ const WhatWeDoMenu = () => {
                             </Typography>
                             <Grid container>
                                 <Grid item xs={12} sm={6}>
+                                <Link style={noUnderline} to={"mobile-application-technologies"}>
                                     <MenuItem onClick={handleClose}>
                                         <Typography fontWeight={"bold"}>
                                             Mobile Application Technologies
                                         </Typography>
                                     </MenuItem>
+                                    </Link>
                                     <Hidden smDown>
                                         <Grid container>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>Android</MenuItem>
+                                                <HashLink style={noUnderline} to={"mobile-application-technologies#android"} ><MenuItem onClick={handleClose}>Android</MenuItem></HashLink>
                                             </Grid>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>IOS</MenuItem>
+                                                <HashLink style={noUnderline} to={"mobile-application-technologies#ios"} ><MenuItem onClick={handleClose}>IOS</MenuItem></HashLink>
                                             </Grid>
                                         </Grid>
                                         <Grid container>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>React Native</MenuItem>
+                                                <HashLink style={noUnderline} to={"mobile-application-technologies#react-native"} ><MenuItem onClick={handleClose}>React Native</MenuItem></HashLink>
                                             </Grid>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>Flutter</MenuItem>
+                                                <HashLink style={noUnderline} to={"mobile-application-technologies#flutter"} ><MenuItem onClick={handleClose}>Flutter</MenuItem></HashLink>
                                             </Grid>
                                         </Grid>
                                     </Hidden>
                                 </Grid>
                                 <Grid item xs={12} sm={6}>
-                                    {/* Grid Item 5 */}
-
+                                    <Link style={noUnderline} to={"frontend-technologies"}>
                                     <MenuItem onClick={handleClose}>
                                         <Typography fontWeight={"bold"}>
                                             Frontend Technologies
                                         </Typography>
                                     </MenuItem>
+                                    </Link>
                                     <Hidden smDown>
                                         <Grid container>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>ReactJS</MenuItem>
+                                                <HashLink style={noUnderline} to={"frontend-technologies#reactjs"} ><MenuItem onClick={handleClose}>ReactJS</MenuItem></HashLink>
                                             </Grid>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>VueJS</MenuItem>
+                                                <HashLink style={noUnderline} to={"frontend-technologies#vuejs"} ><MenuItem onClick={handleClose}>VueJS</MenuItem></HashLink>
                                             </Grid>
                                         </Grid>
                                         <Grid container>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>Tailwind CSS</MenuItem>
+                                                <HashLink style={noUnderline} to={"frontend-technologies#tailwind-css"} ><MenuItem onClick={handleClose}>Tailwind CSS</MenuItem></HashLink>
                                             </Grid>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>Typescript</MenuItem>
+                                                <HashLink style={noUnderline} to={"frontend-technologies#typescript"} ><MenuItem onClick={handleClose}>Typescript</MenuItem></HashLink>
                                             </Grid>
                                         </Grid>
                                     </Hidden>
                                 </Grid>
                                 <Grid item xs={12} sm={6}>
-                                    <MenuItem onClick={handleClose}>
+                                    <Link style={noUnderline} to={"backend-technologies"}><MenuItem onClick={handleClose}>
                                         <Typography fontWeight={"bold"}>
                                             Backend Technologies
                                         </Typography>
                                     </MenuItem>
+                                    </Link>
                                     <Hidden smDown>
                                         <Grid container>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>Laravel</MenuItem>
+                                                <HashLink style={noUnderline} to={"backend-technologies#laravel"} ><MenuItem onClick={handleClose}>Laravel</MenuItem></HashLink>
                                             </Grid>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>Python</MenuItem>
+                                                <HashLink style={noUnderline} to={"backend-technologies#python"} ><MenuItem onClick={handleClose}>Python</MenuItem></HashLink>
                                             </Grid>
                                         </Grid>
                                         <Grid container>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>Golang</MenuItem>
+                                                <HashLink style={noUnderline} to={"backend-technologies#golang"} ><MenuItem onClick={handleClose}>Golang</MenuItem></HashLink>
                                             </Grid>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>NodeJS</MenuItem>
+                                                <HashLink style={noUnderline} to={"backend-technologies#nodejs"} ><MenuItem onClick={handleClose}>NodeJS</MenuItem></HashLink>
                                             </Grid>
                                         </Grid>
                                     </Hidden>
                                 </Grid>
                                 <Grid item xs={12} sm={6}>
-                                    <MenuItem onClick={handleClose}>
+                                    <Link style={noUnderline} to={"fullstack-technologies"}><MenuItem onClick={handleClose}>
                                         <Typography fontWeight={"bold"}>
                                             FullStack Technologies
                                         </Typography>
                                     </MenuItem>
+                                    </Link>
                                     <Hidden smDown>
                                         <Grid container>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>TALL</MenuItem>
+                                                <HashLink style={noUnderline} to={"fullstack-technologies#tall"} ><MenuItem onClick={handleClose}>TALL</MenuItem></HashLink>
                                             </Grid>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>MERN</MenuItem>
+                                                <HashLink style={noUnderline} to={"fullstack-technologies#mern"} ><MenuItem onClick={handleClose}>MERN</MenuItem></HashLink>
                                             </Grid>
                                         </Grid>
                                         <Grid container>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>MEAN</MenuItem>
+                                                <HashLink style={noUnderline} to={"fullstack-technologies#mean"} ><MenuItem onClick={handleClose}>MEAN</MenuItem></HashLink>
                                             </Grid>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>LEMP</MenuItem>
+                                                <HashLink style={noUnderline} to={"fullstack-technologies#lemp"} ><MenuItem onClick={handleClose}>LEMP</MenuItem></HashLink>
                                             </Grid>
                                         </Grid>
                                     </Hidden>
                                 </Grid>
                                 <Grid item xs={12} sm={6}>
-                                    <MenuItem onClick={handleClose}>
+                                    <Link style={noUnderline} to={"future-technologies"}><MenuItem onClick={handleClose}>
                                         <Typography fontWeight={"bold"}>
                                             Future Technologies
                                         </Typography>
                                     </MenuItem>
+                                    </Link>
                                     <Hidden smDown>
                                         <Grid container>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>AI</MenuItem>
+                                                <HashLink style={noUnderline} to={"future-technologies#ai"} ><MenuItem onClick={handleClose}>AI</MenuItem></HashLink>
                                             </Grid>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>ML</MenuItem>
+                                                <HashLink style={noUnderline} to={"future-technologies#ml"} ><MenuItem onClick={handleClose}>ML</MenuItem></HashLink>
                                             </Grid>
                                         </Grid>
                                         <Grid container>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>IOT</MenuItem>
+                                                <HashLink style={noUnderline} to={"future-technologies#iot"} ><MenuItem onClick={handleClose}>IOT</MenuItem></HashLink>
                                             </Grid>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>Data Science</MenuItem>
+                                                <HashLink style={noUnderline} to={"future-technologies#datascience"} ><MenuItem onClick={handleClose}>Data Science</MenuItem></HashLink>
                                             </Grid>
                                         </Grid>
                                     </Hidden>
                                 </Grid>
                                 <Grid item xs={12} sm={6}>
-                                    <MenuItem onClick={handleClose}>
+                                    <Link style={noUnderline} to={"devops-cloud-technologies"}><MenuItem onClick={handleClose}>
                                         <Typography fontWeight={"bold"}>
                                             DevOps & Cloud Technologies
                                         </Typography>
                                     </MenuItem>
+                                    </Link>
                                     <Hidden smDown>
                                         <Grid container>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>AWS</MenuItem>
+                                                <HashLink style={noUnderline} to={"devops-cloud-technologies#aws"} ><MenuItem onClick={handleClose}>AWS</MenuItem></HashLink>
                                             </Grid>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>GCP</MenuItem>
+                                                <HashLink style={noUnderline} to={"devops-cloud-technologies#gcp"} ><MenuItem onClick={handleClose}>GCP</MenuItem></HashLink>
                                             </Grid>
                                         </Grid>
                                         <Grid container>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>Jenkins</MenuItem>
+                                                <HashLink style={noUnderline} to={"devops-cloud-technologies#jenkins"} ><MenuItem onClick={handleClose}>Jenkins</MenuItem></HashLink>
                                             </Grid>
                                             <Grid item xs={12} sm={6}>
-                                                <MenuItem onClick={handleClose}>
+                                                <HashLink style={noUnderline} to={"devops-cloud-technologies#docker-kubernate"} ><MenuItem onClick={handleClose}>
                                                     Docker/Kubernate
-                                                </MenuItem>
+                                                </MenuItem></HashLink>
                                             </Grid>
                                         </Grid>
                                     </Hidden>

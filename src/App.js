@@ -9,13 +9,7 @@ import Career from "./Components/Career/Career";
 import AppBarComponent from "./Components/AppBarComponent/AppBarComponent";
 import ErrorPage from "./Components/ErrorPage/ErrorPage";
 import MobileAppDevelopment from "./Components/Pages/MobileAppDevelopment/MobileAppDevelopment";
-import { Android } from "@mui/icons-material";
-import HybridApp from "./Components/Pages/MobileAppDevelopment/HybridApp";
-import IOS from "./Components/Pages/MobileAppDevelopment/IOS";
-import PWA from "./Components/Pages/MobileAppDevelopment/PWA";
-import AndroidDevelopment from "./Components/Pages/MobileAppDevelopment/Android";
 import AIMIDevelopment from "./Components/Pages/AIMLDevelopment/AIMIDevelopment";
-import ScrollToTop from "./Components/ScrollToUp";
 import BrowserExtnDevelopment from "./Components/Pages/BrowserExtnDevelopment/BrowserExtnDevelopment";
 import Web3Developmet from "./Components/Pages/Web3Devellopment/Web3Developmet";
 import WebDevelopmentService from "./Components/Pages/WebDevelopmentService/WebDevelopmentService";
@@ -26,7 +20,9 @@ import BackendTech from "./Components/Pages/BackendTech/BackendTech";
 import FullStackTech from "./Components/Pages/FullStackTech/FullStackTech";
 import FutureTech from "./Components/Pages/FutureTech/FutureTech";
 import DevopsCloudTech from "./Components/Pages/DevopsCloudTech/DevopsCloudTech";
-
+import Industries from "./Components/Pages/Industries/Industries";
+import './App.css'
+import Customer from "./Components/Pages/Customer/Customer";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -96,12 +92,45 @@ const App = () => {
           path: "/devops-cloud-tech",
           element: <DevopsCloudTech />,
         },
+        {
+          path: "/mobile-application-technologies",
+          element: <MobileAppDevelopmentTech />,
+        },
+        {
+          path: "/frontend-technologies",
+          element: <FrontEndTech />,
+        },
+        {
+          path: "/backend-technologies",
+          element: <BackendTech />,
+        },
+        {
+          path: "/future-technologies",
+          element: <FutureTech />,
+        },
+        {
+          path: "/fullstack-technologies",
+          element: <FullStackTech />,
+        },
+        {
+          path: "/devops-cloud-technologies",
+          element: <DevopsCloudTech />,
+        },
+
+        {
+          path: "/industries",
+          element: <Industries />,
+        },
+        {
+          path: "/customer",
+          element: <Customer />,
+        },
       ]
     },
     
   ]);
 
-  return <RouterProvider router={router} />;
+  return <div className="App"><RouterProvider router={router} /></div>;
 }
 
 export default App;

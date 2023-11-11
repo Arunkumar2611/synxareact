@@ -17,7 +17,7 @@ const DevopsCloudTech = () => {
             <h2>Section 3  </h2>
 
           </Box>
-          <Box id="docker-kubernates">
+          <Box id="docker-kubernate">
             <h2>Section 4  </h2>
 
           </Box>

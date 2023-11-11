@@ -64,10 +64,10 @@ function AppBarComponent(props) {
     return (
         <Box sx={{ display: "flex" }}>
             <CssBaseline />
-            <AppBar component="nav">
+            <AppBar component="nav" elevation={0} sx={{ backgroundColor: "white"}}>
                 <Toolbar>
                     <IconButton
-                        color="inherit"
+                        color="black"
                         aria-label="open drawer"
                         edge="start"
                         onClick={handleDrawerToggle}
@@ -80,27 +80,27 @@ function AppBarComponent(props) {
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
                     >
-                        <Link to="/" style={{ textDecoration: "none", color: "#FFF" }}>
+                        <Link to="/" style={{ textDecoration: "none", color: "black" }}>
                             MUI
                         </Link>
                     </Typography>
                     <Box sx={{ display: { xs: "none", sm: "block" } }}>
-                        <Link to="/" style={{ textDecoration: "none", color: "#FFF" }}>
-                            <Button sx={{ color: "#fff" }}>Home</Button>
+                        <Link to="/" style={{ textDecoration: "none", color: "black" }}>
+                            <Button sx={{ color: "black" }}>Home</Button>
                         </Link>
 
                         <WhatWeDoMenu />
                         
                         <WhatWeServeMenu />
 
-                        <Link to="/about" style={{ textDecoration: "none", color: "#FFF" }}>
-                            <Button sx={{ color: "#fff" }}>About</Button>
+                        <Link to="/about" style={{ textDecoration: "none", color: "black" }}>
+                            <Button sx={{ color: "black" }}>About</Button>
                         </Link>
                         <Link
                             to="/career"
-                            style={{ textDecoration: "none", color: "#FFF" }}
+                            style={{ textDecoration: "none", color: "black" }}
                         >
-                            <Button sx={{ color: "#fff" }}>Career</Button>
+                            <Button sx={{ color: "black" }}>Career</Button>
                         </Link>
                         
                     </Box>
