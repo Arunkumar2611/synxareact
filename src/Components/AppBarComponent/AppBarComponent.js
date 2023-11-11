@@ -17,6 +17,10 @@ import Button from "@mui/material/Button";
 import { Link, Outlet } from "react-router-dom";
 import WhatWeDoMenu from "./WhatWeDoMenu";
 import WhatWeServeMenu from "./WhatWeServeMenu";
+import Career from "./Career";
+import Company from "./Company";
+import LOGO from '../../Assets/Logo/synxalogo.png'
+import Footer from "../Footer/Footer";
 
 const drawerWidth = 240;
 const navItems = ["Home", "About", "Contact"];
@@ -81,7 +85,7 @@ function AppBarComponent(props) {
                         sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
                     >
                         <Link to="/" style={{ textDecoration: "none", color: "black" }}>
-                            MUI
+                            <img src={LOGO} alt="Logo"/>
                         </Link>
                     </Typography>
                     <Box sx={{ display: { xs: "none", sm: "block" } }}>
@@ -93,14 +97,12 @@ function AppBarComponent(props) {
                         
                         <WhatWeServeMenu />
 
-                        <Link to="/about" style={{ textDecoration: "none", color: "black" }}>
-                            <Button sx={{ color: "black" }}>About</Button>
-                        </Link>
-                        <Link
-                            to="/career"
-                            style={{ textDecoration: "none", color: "black" }}
-                        >
-                            <Button sx={{ color: "black" }}>Career</Button>
+                        <Career />
+
+                        <Company />
+
+                        <Link to="/blog" style={{ textDecoration: "none", color: "black" }}>
+                            <Button sx={{ color: "black" }}>Blog</Button>
                         </Link>
                         
                     </Box>
@@ -126,9 +128,13 @@ function AppBarComponent(props) {
                     {drawer}
                 </Drawer>
             </nav>
-            <Box component="main" sx={{ p: 3 }}>
+            <Box component="main" sx={{ p: 5 }}>
                 <Toolbar />
-                <Outlet />
+                <Box component="main" sx={{ p: 5 }}>
+                    <Outlet  />
+                </Box>
+                <Toolbar />
+                <Footer />
             </Box>
         </Box>
     );

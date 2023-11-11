@@ -3,9 +3,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import About from "./Components/About/About";
 import Home from "./Components/Home/Home";
-import Career from "./Components/Career/Career";
 import AppBarComponent from "./Components/AppBarComponent/AppBarComponent";
 import ErrorPage from "./Components/ErrorPage/ErrorPage";
 import MobileAppDevelopment from "./Components/Pages/MobileAppDevelopment/MobileAppDevelopment";
@@ -23,6 +21,13 @@ import DevopsCloudTech from "./Components/Pages/DevopsCloudTech/DevopsCloudTech"
 import Industries from "./Components/Pages/Industries/Industries";
 import './App.css'
 import Customer from "./Components/Pages/Customer/Customer";
+import Career from "./Components/Pages/Careers/Career";
+import WorkLife from "./Components/Pages/Careers/WorkLife";
+import ApplyJobs from "./Components/Pages/Careers/ApplyJobs";
+import AboutUs from "./Components/Pages/Company/AboutUs";
+import Infrastructure from "./Components/Pages/Company/Infrastructure";
+import Enquery from "./Components/Pages/Company/Enquery";
+import Blog from "./Components/Blog/Blog";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -36,12 +41,33 @@ const App = () => {
           element: <Home />,
         },
         {
-          path: "/about",
-          element: <About />,
+          path: "/careers",
+          element: <Career />,
         },
         {
-          path: "/career",
-          element: <Career />,
+          path: "/life-at-synxa",
+          element: <WorkLife />,
+        },
+        {
+          path: "/apply-for-job",
+          element: <ApplyJobs />,
+        },
+        
+        {
+          path: "/about-us",
+          element: <AboutUs />,
+        },
+        {
+          path: "/infrastructure",
+          element: <Infrastructure />,
+        },
+        {
+          path: "/enquiry",
+          element: <Enquery />,
+        },
+        {
+          path: "/blog",
+          element: <Blog />,
         },
         
         {
@@ -125,6 +151,8 @@ const App = () => {
           path: "/customer",
           element: <Customer />,
         },
+        
+        
       ]
     },
     
