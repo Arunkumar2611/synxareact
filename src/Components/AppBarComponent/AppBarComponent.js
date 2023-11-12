@@ -128,9 +128,9 @@ function AppBarComponent(props) {
                     {drawer}
                 </Drawer>
             </nav>
-            <Box component="main" sx={{ p: 5 }}>
+            <Box component="main">
                 <Toolbar />
-                <Box component="main" sx={{ p: 5 }}>
+                <Box component="main" sx={{ p: 10 }}>
                     <Outlet  />
                 </Box>
                 <Toolbar />

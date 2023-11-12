@@ -28,6 +28,8 @@ import AboutUs from "./Components/Pages/Company/AboutUs";
 import Infrastructure from "./Components/Pages/Company/Infrastructure";
 import Enquery from "./Components/Pages/Company/Enquery";
 import Blog from "./Components/Blog/Blog";
+import Services from "./Components/Pages/Services/Services";
+import Technologies from "./Components/Pages/Technologies/Technologies";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -68,6 +70,14 @@ const App = () => {
         {
           path: "/blog",
           element: <Blog />,
+        },
+        {
+          path: "/services/*",
+          element: <Services />,
+        },
+        {
+          path: "/technologies",
+          element: <Technologies />,
         },
         
         {

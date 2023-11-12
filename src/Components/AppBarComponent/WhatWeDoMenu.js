@@ -43,6 +43,7 @@ const WhatWeDoMenu = () => {
                 <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
                     <Grid container spacing={2}>
                         <Grid item xs={12} sm={6}>
+                        <Link style={noUnderline} to={"services"}>
                             <Typography
                                 component={"div"}
                                 m={2}
@@ -51,6 +52,7 @@ const WhatWeDoMenu = () => {
                             >
                                 Services
                             </Typography>
+                            </Link>
                             <Grid container>
                                 <Grid item xs={12} sm={6}>
                                     <Link style={noUnderline} to={"mobileappdevelopment"}>
@@ -231,6 +233,7 @@ const WhatWeDoMenu = () => {
                         </Grid>
 
                         <Grid item xs={12} sm={6}>
+                        <Link style={noUnderline} to={"technologies"}>
                             <Typography
                                 component={"div"}
                                 m={2}
@@ -239,6 +242,7 @@ const WhatWeDoMenu = () => {
                             >
                                 Technologies
                             </Typography>
+                            </Link>
                             <Grid container>
                                 <Grid item xs={12} sm={6}>
                                 <Link style={noUnderline} to={"mobile-application-technologies"}>

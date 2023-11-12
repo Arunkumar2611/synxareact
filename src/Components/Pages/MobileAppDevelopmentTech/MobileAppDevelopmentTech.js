@@ -1,13 +1,14 @@
 import React from 'react'
 import { Box } from '@mui/material';
+import Android from './Android';
 
 const MobileAppDevelopmentTech = () => {
     return (
         <div>
           <h1>Mobile Application Technologies</h1>
           <Box id="android">
-            <h2>Section 1 </h2>
-
+            <h2>Section 1 Android</h2>
+            <Android />
           </Box>
           <Box id="ios">
             <h2>Section 2 </h2>
